@@ -1,0 +1,117 @@
+/* Hero Section */
+.mindfulness-hero {
+  background: url("../assets/images/mindfulness-hero.jpg") no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.mindfulness-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mindfulness-hero p {
+  font-size: 1.2rem;
+}
+
+/* Breathing */
+.breathing {
+  text-align: center;
+  padding: 2rem;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, #81c784, #388e3c);
+  border-radius: 50%;
+  margin: 2rem auto; /* added margin so it doesn’t touch text */
+  transition: transform 4s ease-in-out;
+}
+
+#breathingText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem; /* space below circle */
+}
+
+/* Meditation Timer */
+.meditation {
+  text-align: center;
+  padding: 2rem;
+}
+
+#timerDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #2e7d32;
+}
+
+.meditation button {
+  margin: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.meditation button:hover {
+  background: #388e3c;
+}
+
+/* Sessions */
+.sessions {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Quotes */
+.quotes {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f8e9;
+  font-style: italic;
+}
+
+.quotes blockquote {
+  margin: 1rem auto;
+  max-width: 700px;
+}
+
+.benefits {
+  padding: 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.benefits li {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefits li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}

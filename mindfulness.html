@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindfulness & Relaxation</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/mindfulness.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GreenBite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html" class="active">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="mindfulness-hero">
+    <h1>Mindfulness & Relaxation</h1>
+    <p>Calm your mind, breathe deeply, and recharge.</p>
+  </section>
+
+  <!-- Guided Breathing -->
+  <section class="breathing">
+    <h2>Guided Breathing</h2>
+    <div class="circle" id="breathingCircle"></div>
+    <p id="breathingText">Breathe In</p>
+  </section>
+
+  <!-- Meditation Timer -->
+  <section class="meditation">
+    <h2>Meditation Timer</h2>
+    <label for="minutes">Minutes:</label>
+    <input type="number" id="minutes" value="5" min="0" max="15">
+    <label for="seconds">Seconds:</label>
+    <input type="number" id="seconds" value="0" min="0" max="59">
+    <div id="timerDisplay">05:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+  </section>
+
+  <!-- Completed Sessions -->
+  <section class="sessions">
+    <h2>Completed Sessions</h2>
+    <ul id="sessionList"></ul>
+  </section>
+
+  <!-- Quotes -->
+  <section class="quotes">
+    <h2>Mindfulness Quotes</h2>
+    <blockquote>“Mindfulness is a way of befriending ourselves and our experience.” – Jon Kabat-Zinn</blockquote>
+    <blockquote>“Feelings come and go like clouds in a windy sky. Conscious breathing is my anchor.” – Thich Nhat Hanh</blockquote>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2>Benefits of Mindfulness</h2>
+    <ul>
+      <li>Reduces stress and anxiety</li>
+      <li>Improves focus and concentration</li>
+      <li>Boosts emotional resilience</li>
+      <li>Encourages healthier lifestyle habits</li>
+      <li>Supports better sleep and relaxation</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>GreenBite</h3>
+        <p>Eat well, stay active, live mindfully. Your journey to wellness starts here.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Subscribe</h4>
+        <form id="footer-newsletter-form">
+          <input type="email" id="footer-newsletter-email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GreenBite Wellness | Designed for a healthier life</p>
+    </div>
+  </footer>
+
+  <script src="js/mindfulness.js"></script>
+  <script src="js/global.js"></script>
+</body>
+</html>

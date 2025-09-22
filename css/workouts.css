@@ -1,0 +1,222 @@
+/* Workouts Page Background */
+.workouts-background {
+  background-image: url("../assets/images/workouts-bg.jpg");
+  background-size: cover;       /* fills entire area */
+  background-position: center;  /* centers image */
+  background-attachment: fixed; /* creates the shrink/scroll effect */
+  background-repeat: no-repeat;
+  min-height: 100vh;            /* always full height */
+}
+
+.workouts-background::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity */
+  z-index: -1;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  color: black;
+  background:#f9f9f9;
+  padding: 3rem 1rem;
+}
+.hero h1 {
+  color:#2e7d32;
+  font-size: 2.5rem;
+}
+.hero p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Benefits */
+.workout-benefits {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f8e9;
+}
+.workout-benefits p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Quotes */
+.workout-quotes {
+  text-align: center;
+  padding: 2rem;
+  background: #e3f2fd;
+}
+.workout-quotes blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  max-width: 700px;
+  padding: 1rem;
+  border-left: 5px solid #1976d2;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.workout-quotes span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Facts */
+.workout-facts {
+  text-align: center;
+  padding: 2rem;
+  background: #fff3e0;
+  border-left: 6px solid #ff9800;
+}
+.workout-facts h2 {
+  margin-bottom: 1rem;
+  color: #e65100;
+}
+.workout-facts li {
+  margin: 0.5rem auto;
+  padding: 0.7rem;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  font-size: 1rem;
+}
+
+/* Form */
+.workout-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.gen-btn {
+  background: #1976d2;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.gen-btn:hover {
+  background: #2196f3;
+}
+
+/* Workout Plan */
+.workout-plan {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fffde7;
+  border-radius: 10px;
+}
+.workout-plan.hidden {
+  display: none;
+}
+.workout-plan ul {
+  list-style: none;
+  padding: 0;
+}
+.workout-plan li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Timer */
+.timer-controls {
+  margin: 1rem 0;
+}
+.timer-controls input {
+  width: 70px;
+  padding: 0.3rem;
+  margin: 0 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+#timer-display {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #d32f2f;
+}
+.timer-btn {
+  margin: 0.3rem;
+  background: #4caf50;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.timer-btn:hover {
+  background: #66bb6a;
+}
+
+/* Tips */
+.workout-tips {
+  padding: 2rem;
+  background: #e3f2fd;
+}
+.workout-tips ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  padding: 0;
+}
+.workout-tips li {
+  background: white;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+/* Types of Workouts */
+.types-of-workouts {
+  padding: 2rem;
+  background: #f1f8e9;
+  text-align: center;
+}
+.workout-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.type-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.type-card h3 {
+  margin-bottom: 0.5rem;
+  color: #d32f2f;
+}

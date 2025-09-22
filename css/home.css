@@ -1,0 +1,207 @@
+/* Hero Section with Parallax Image */
+.home-hero {
+  background: url("../assets/images/home-hero.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-attachment: fixed; /* makes it parallax */
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.5); /* transparent dark box for readability */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  background: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #43a047;
+}
+  .cta-btn {
+    background: #009688;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .cta-btn:hover {
+    background: #26a69a;
+  }
+  .tips {
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem;
+  }
+  .about {
+    text-align: center;
+    padding: 2rem;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .about-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .testimonials {
+    background: #f1f8f6;
+    padding: 2rem;
+    text-align: center;
+  }
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Quick Links Section */
+.quick-links {
+  text-align: center;
+  padding: 2rem;
+  background: #f5f5f5;
+}
+.quick-links h2 {
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.link-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.link-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.link-card h3 {
+  padding: 1rem;
+  color: #1976d2;
+}
+
+/* Hero (already in your file, just reminder) */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+#heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Explore Section */
+.explore-greenbite {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+}
+.explore-greenbite h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+.explore-greenbite p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.explore-card {
+  background: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.explore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.explore-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.explore-card h3 {
+  margin: 0.8rem 0 0.3rem;
+  color: #1976d2;
+}
+.explore-card p {
+  font-size: 0.9rem;
+  color: #666;
+}

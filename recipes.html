@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenBite Recipes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/recipes.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"> GreenBite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html" class="active">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Healthy Recipes</h1>
+    <p>Wholesome meals to fuel your body and mind.</p>
+  </section>
+
+  <!-- Intro Paragraph -->
+  <section class="recipes-intro">
+    <p>
+      At GreenBite, we believe that eating healthy should never feel like a restriction — 
+      it should be a lifestyle. Choosing nutrient-rich foods helps improve energy, boost 
+      immunity, and maintain a balanced mind and body. With the right recipes, 
+      you can enjoy delicious meals that nourish your health and bring positive 
+      changes to your everyday life. 
+    </p>
+  </section>
+
+  <!-- Search + Filter -->
+  <section class="search-filter">
+    <input type="text" id="search" placeholder="Search recipes...">
+    <select id="category">
+      <option value="all">All Categories</option>
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="snack">Snack</option>
+    </select>
+  </section>
+
+  <!-- Recipe Cards -->
+  <section id="recipe-container" class="grid"></section>
+
+  <!-- Modal -->
+  <div id="recipe-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h2 id="recipe-title"></h2>
+      <img id="recipe-img" alt="Recipe image">
+      <p id="recipe-desc"></p>
+
+      <h3>Ingredients</h3>
+      <ul id="recipe-ingredients"></ul>
+
+      <h3>Steps</h3>
+      <ol id="recipe-steps"></ol>
+
+      <h3>Nutrition Info</h3>
+      <table id="nutrition-table"></table>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3> GreenBite</h3>
+      <p>Eat well, stay active, live mindfully. Your journey to wellness starts here.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Subscribe</h4>
+      <form id="footer-newsletter-form">
+        <input type="email" id="footer-newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 GreenBite Wellness | Designed with love for a healthier life</p>
+  </div>
+</footer>
+  <script src="js/recipes.js"></script>
+  <script src="js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout Generator</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/workouts.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"> GreenBite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html" class="active">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="workouts-background">
+
+  <!-- Hero -->
+   <section class="hero">
+    <h1> Workout Generator</h1>
+    <p>Custom workouts based on your goals and equipment.</p>
+   </section>
+ </div>
+ 
+  <!-- Why Exercise -->
+  <section class="workout-benefits">
+    <h2> Why Regular Exercise Matters</h2>
+    <p>
+      Regular exercise improves your overall health, boosts energy, and reduces the risk of chronic diseases. 
+      It strengthens muscles and bones, enhances mood, and supports better sleep. 
+      Even short daily workouts can create lasting positive changes in your life.
+    </p>
+  </section>
+
+  <!-- Motivational Quotes -->
+  <section class="workout-quotes">
+    <h2> Stay Motivated</h2>
+    <blockquote>
+      “The body achieves what the mind believes.”  
+      <span>- Arthur Lydiard</span>
+    </blockquote>
+    <blockquote>
+      "Exercise is the key not only to physical health but to peace of mind."
+      <span>- Nelson Mandela</span>
+    </blockquote>
+  </section>
+
+  <!-- Did You Know -->
+  <section class="workout-facts">
+    <h2> Did You Know?</h2>
+    <ul>
+      <li>Just 30 minutes of daily exercise can reduce the risk of heart disease by 40%.</li>
+      <li>Strength training boosts metabolism, helping you burn calories even at rest.</li>
+      <li>Exercise releases endorphins — your body’s natural “happy hormones”.</li>
+    </ul>
+  </section>
+
+  <!-- Workout Form -->
+  <main>
+    <section class="workout-form">
+      <h2>Choose Your Preferences</h2>
+      <form id="workout-form">
+        <div class="form-group">
+          <label for="bodypart">Body Part</label>
+          <select id="bodypart">
+            <option value="full">Full Body</option>
+            <option value="arms">Arms</option>
+            <option value="legs">Legs</option>
+            <option value="core">Core</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="equipment">Equipment</label>
+          <select id="equipment">
+            <option value="none">No Equipment</option>
+            <option value="bodyweight">Bodyweight Only</option>
+            <option value="dumbbell">Dumbbell</option>
+            <option value="resistance">Resistance Band</option>
+            <option value="kettlebell">Kettlebell</option>
+            <option value="barbell">Barbell</option>
+            <option value="yogamat">Yoga Mat</option>
+          </select>
+        </div>
+
+        <button type="submit" class="gen-btn">Generate Workout</button>
+      </form>
+    </section>
+
+    <!-- Workout Plan -->
+    <section id="workout-plan" class="workout-plan hidden">
+      <h2>Your Workout Plan</h2>
+      <ul id="exercise-list"></ul>
+
+      <!-- Timer Controls -->
+      <div class="timer-controls">
+        <label for="work-minutes">Minutes:</label>
+        <input type="number" id="work-minutes" min="0" max="5" value="0">
+        <label for="work-seconds">Seconds:</label>
+        <input type="number" id="work-seconds" min="10" max="59" value="00">
+      </div>
+
+      <!-- Timer Display -->
+      <div id="timer-display">00:00</div>
+
+      <!-- Timer Buttons -->
+      <button id="start-timer" class="timer-btn">▶ Start</button>
+      <button id="stop-timer" class="timer-btn">⏸ Stop</button>
+      <button id="reset-timer" class="timer-btn">⏹ Reset</button>
+    </section>
+  </main>
+
+  <!-- Workout Tips -->
+  <section class="workout-tips">
+    <h2> Tips for Effective Workouts</h2>
+    <ul>
+      <li> Always warm up before exercising.</li>
+      <li> Stay hydrated before, during, and after workouts.</li>
+      <li> Focus on form over speed — quality matters most.</li>
+      <li> Rest days are just as important as workout days.</li>
+      <li> Set realistic goals and track your progress.</li>
+    </ul>
+  </section>
+
+  <!-- Types of Workouts -->
+  <section class="types-of-workouts">
+    <h2>Different Types of Workouts</h2>
+    <div class="workout-types-grid">
+      <div class="type-card">
+        <h3> Cardio</h3>
+        <p>Improves heart health and burns calories (running, cycling, HIIT).</p>
+      </div>
+      <div class="type-card">
+        <h3> Strength</h3>
+        <p>Builds muscle and increases power (weights, resistance training).</p>
+      </div>
+      <div class="type-card">
+        <h3> Flexibility</h3>
+        <p>Improves mobility and reduces injury risk (yoga, stretching).</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3> GreenBite</h3>
+      <p>Eat well, stay active, live mindfully. Your journey to wellness starts here.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Subscribe</h4>
+      <form id="footer-newsletter-form">
+        <input type="email" id="footer-newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 GreenBite Wellness | Designed with love for a healthier life</p>
+  </div>
+
+</footer>
+
+  <script src="js/workouts.js"></script>
+  <script src="js/global.js"></script>
+</body>
+</html>
