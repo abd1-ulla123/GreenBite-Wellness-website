@@ -41,8 +41,10 @@
   </section>
 
   <!-- Search + Filter -->
-  <section class="search-filter">
+  <div class="search-filter">
+    <label for="search" class="visually-hidden">Search Recipes</label>
     <input type="text" id="search" placeholder="Search recipes...">
+    <label for="catgory" class="visually-hidden">Recipe Category</label>
     <select id="category">
       <option value="all">All Categories</option>
       <option value="breakfast">Breakfast</option>
@@ -50,7 +52,7 @@
       <option value="dinner">Dinner</option>
       <option value="snack">Snack</option>
     </select>
-  </section>
+  </div>
 
   <!-- Recipe Cards -->
   <section id="recipe-container" class="grid"></section>
