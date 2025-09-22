@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Recipes - GreenBite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenBite Recipes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/recipes.css">
 </head>
@@ -11,7 +15,7 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="logo">GreenBite</div>
+      <div class="logo"> GreenBite</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html" class="active">Recipes</a></li>
@@ -24,104 +28,93 @@
   </header>
 
   <!-- Hero -->
-  <section class="recipes-hero">
+  <section class="hero">
     <h1>Healthy Recipes</h1>
     <p>Wholesome meals to fuel your body and mind.</p>
   </section>
 
-  <!-- Intro -->
+  <!-- Intro Paragraph -->
   <section class="recipes-intro">
-    <h2>Why Healthy Recipes?</h2>
     <p>
-      At GreenBite, we believe that eating healthy should never feel like a restriction —
-      it should be a lifestyle. Choosing nutrient-rich foods helps improve energy, boost immunity,
-      and maintain a balanced mind and body. With the right recipes, you can enjoy delicious meals
-      that nourish your health and bring positive changes to your everyday life.
+      At GreenBite, we believe that eating healthy should never feel like a restriction — 
+      it should be a lifestyle. Choosing nutrient-rich foods helps improve energy, boost 
+      immunity, and maintain a balanced mind and body. With the right recipes, 
+      you can enjoy delicious meals that nourish your health and bring positive 
+      changes to your everyday life. 
     </p>
   </section>
 
-  <!-- Search -->
+  <!-- Search + Filter -->
   <section class="search-filter">
-    <h2>Search Recipes</h2>
-    <input type="text" placeholder="Search recipes...">
-    <select>
-      <option value="all">All</option>
+    <input type="text" id="search" placeholder="Search recipes...">
+    <select id="category">
+      <option value="all">All Categories</option>
       <option value="breakfast">Breakfast</option>
       <option value="lunch">Lunch</option>
       <option value="dinner">Dinner</option>
-      <option value="snacks">Snacks</option>
+      <option value="snack">Snack</option>
     </select>
   </section>
 
-  <!-- Recipe Container -->
-  <section id="recipe-container" class="grid">
-    <h2>Recipe List</h2>
+  <!-- Recipe Cards -->
+  <section id="recipe-container" class="grid"></section>
 
-    <!-- Recipe 1 -->
-    <article class="recipe-card">
-      <img id="recipe-img" src="assets/images/recipes/quinoa-bowl.jpg" alt="Quinoa Veggie Bowl">
-      <h3 id="recipe-title">Quinoa Veggie Bowl</h3>
-      <p>A wholesome bowl with quinoa, veggies, and a light dressing.</p>
-    </article>
+  <!-- Modal -->
+  <div id="recipe-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h2 id="recipe-title"></h2>
+      <img id="recipe-img" alt="Recipe image">
+      <p id="recipe-desc"></p>
 
-    <!-- Recipe 2 -->
-    <article class="recipe-card">
-      <img id="recipe-img" src="assets/images/recipes/chickpea-salad.jpg" alt="Chickpea Salad">
-      <h3 id="recipe-title">Chickpea Salad</h3>
-      <p>Light yet filling salad with chickpeas and veggies.</p>
-    </article>
+      <h3>Ingredients</h3>
+      <ul id="recipe-ingredients"></ul>
 
-    <!-- Recipe 3 -->
-    <article class="recipe-card">
-      <img id="recipe-img" src="assets/images/recipes/oats-smoothie.jpg" alt="Oats Smoothie">
-      <h3 id="recipe-title">Oats Smoothie</h3>
-      <p>A creamy smoothie with oats, banana, and almond milk.</p>
-    </article>
+      <h3>Steps</h3>
+      <ol id="recipe-steps"></ol>
 
-    <!-- Recipe 4 -->
-    <article class="recipe-card">
-      <img id="recipe-img" src="assets/images/recipes/grilled-chicken.jpg" alt="Grilled Chicken Bowl">
-      <h3 id="recipe-title">Grilled Chicken Bowl</h3>
-      <p>High-protein chicken bowl with greens and grains.</p>
-    </article>
-
-    <!-- Recipe 5 -->
-    <article class="recipe-card">
-      <img id="recipe-img" src="assets/images/recipes/fruit-yogurt.jpg" alt="Fruit Yogurt Bowl">
-      <h3 id="recipe-title">Fruit Yogurt Bowl</h3>
-      <p>A refreshing mix of yogurt, honey, and seasonal fruits.</p>
-    </article>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>GreenBite</h3>
-        <p>Eat well, stay active, live mindfully. Your journey to wellness starts here.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="calculator.html">Calculator</a></li>
-          <li><a href="workouts.html">Workouts</a></li>
-          <li><a href="mindfulness.html">Mindfulness</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-newsletter">
-        <h4>Subscribe</h4>
-        <form id="footer-newsletter-form">
-          <input type="email" id="footer-newsletter-email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
+      <h3>Nutrition Info</h3>
+      <table id="nutrition-table"></table>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 GreenBite Wellness | Designed for a healthier life</p>
+  </div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3> GreenBite</h3>
+      <p>Eat well, stay active, live mindfully. Your journey to wellness starts here.</p>
     </div>
-  </footer>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workouts.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Subscribe</h4>
+      <form id="footer-newsletter-form">
+        <input type="email" id="footer-newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 GreenBite Wellness | Designed with love for a healthier life</p>
+  </div>
+</footer>
+  <script src="js/recipes.js"></script>
+  <script src="js/global.js"></script>
 </body>
 </html>
